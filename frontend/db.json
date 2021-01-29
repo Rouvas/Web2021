@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "surname": "Воротников",
+      "name": "Григорий",
+      "middlename": "Алексеевич",
+      "phone": "899999999",
+      "email": "v@ya.ru",
+      "birth": "11-90-2000",
+      "group": "181-323",
+      "stud": "007",
+      "id": 13
+    },
+    {
+      "surname": "Клеменьтев",
+      "name": "Илья",
+      "middlename": "Петрович",
+      "phone": "89999",
+      "email": "k@ya.ru",
+      "birth": "31.03.2003",
+      "group": "181-321",
+      "stud": "007",
+      "id": 15
+    },
+    {
+      "surname": "Аааа",
+      "name": "увмву",
+      "middlename": "кум",
+      "phone": "укм",
+      "email": "мукм",
+      "birth": "кум",
+      "group": "укм",
+      "stud": "укм",
+      "id": 16
+    },
+    {
+      "surname": "Бббб",
+      "name": "43уап",
+      "middlename": "мук",
+      "phone": "мук",
+      "email": "ум",
+      "birth": "укм",
+      "group": "кум",
+      "stud": "укм",
+      "id": 17
+    }
+  ]
+}
