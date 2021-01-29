@@ -27,7 +27,7 @@
         <td>{{student.surname}} &nbsp; {{ student.name[0]}}.{{student.middlename[0]}}.</td>
         <td>{{student.sgroup}}</td>
         <td>{{student.stud}}</td>
-        <td><button type="button" class="btn btn-info" [routerLink]="['/editstud', student.id]">Open </button> <button type="button" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/editstud', student.id]">Edit</button> <button type="button" class="btn btn-warning" style="margin-left: 10px;" (click)="onDelete(student.id)">Del</button></td>
+        <td><button type="button" class="btn btn-info" [routerLink]="['/student', student.id]">Open </button> <button type="button" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/editstud', student.id]">Edit</button> <button type="button" class="btn btn-warning" style="margin-left: 10px;" (click)="onDelete(student.id)">Del</button></td>
       </tr>
     </tbody>
   </table>

@@ -1,1 +1,18 @@
-<p>showstudent works!</p>
+
+<div class="container">
+<div class="card">
+    <div class="card-header">
+    Информация о студенте: {{showstudent.surname}} {{showstudent.name}} {{showstudent.middlename}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Группа: {{showstudent.sgroup}}</h5>
+      <p class="card-text"> Дата рождения: {{showstudent.birth}} <br> 
+        Email: {{showstudent.email}} <br> 
+        Телефон: {{showstudent.phone}} <br>
+        Напраление подготовки: {{showstudent.stud}}  <br>
+    ID в системе: {{showstudent.id}} </p>
+      <a  [routerLink]="['/editstud', showstudent.id]" class="btn btn-primary">Редактировать студента</a>
+    </div>
+  </div>
+
+</div>

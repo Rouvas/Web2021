@@ -82,9 +82,9 @@ connection.getConnection((err, connect) => {
 
 
   app.post("/add", (req, res) => {
-    connection.query(`INSERT INTO Students (surname, name, middlename, number, email, data, id) 
-    VALUES (?, ?, ?, ?, ?, ?, ?);`,
-    [req.body.surname, req.body.name, req.body.middlename, req.body.number, req.body.email, req.body.data, req.params.id],
+    connection.query(`INSERT INTO Students (surname, name, middlename, phone, email, birth, sgroup, stud, id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);`,
+    [req.body.surname, req.body.name, req.body.middlename, req.body.phone, req.body.email, req.body.birth, req.body.sgroup, req.body.stud, req.params.id],
       function (err) {
         if (err) {
           res.status(500).send('Ошибка сервера')

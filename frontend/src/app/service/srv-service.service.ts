@@ -11,6 +11,7 @@ export class SrvService {
   studentsadd: Student[] = [];
   studentsedit: Student[] = [];
   link = 'http://localhost:3000/students/';
+  addlink = 'http://localhost:3000/add';
   options = {
     headers: {
       'Content-Type': 'application/json'
@@ -36,20 +37,8 @@ export class SrvService {
   }
 
   async addStudent(student: Student) {
-    this.studentsadd = [];
-    const dataadd = await this.http
-    .get(this.link)
-    .toPromise();
 
-   for (const index in dataadd) {
-     delete dataadd[index].createdAt;
-     delete dataadd[index].updatedAt;
-     this.studentsadd.push(dataadd[index]);
-   }
-
-
-
-    return this.http.post(this.link, student, this.options).toPromise();
+    return this.http.post(this.addlink, student, this.options).toPromise();
   }
 
   async removeStudent(id: number) {

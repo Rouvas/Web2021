@@ -32,12 +32,20 @@ export class EditorComponent implements OnInit {
      return isNaN(id);
    }
 
+    newid;
+    studnew;
+    
    onAddStud(){
-     const studnew = this.studForm.value;
-     this.srv.addStudent(studnew).then(()=>{
+
+    console.log(this.newid);
+     this.studnew = this.studForm.value;
+     this.studnew.id = this.newid;
+     console.log(this.studnew);
+     this.srv.addStudent(this.studnew).then(()=>{
        this.studForm.reset();
        document.location.href="/list";
      })
+     
    };
 
    onDelete(id){
@@ -71,6 +79,13 @@ export class EditorComponent implements OnInit {
           })
       })
     }
+
+
+    this.srv.getStudents().then(()=>{
+      (this.srv.students).forEach(student=>{ this.newid = +student.id + 1;
+        })
+    })
+
   }
 
 }
