@@ -4,6 +4,7 @@ const mysql = require("mysql2");
 const dbConfig = require("./db.config.js");
 const history = require("connect-history-api-fallback");
 const app = express();
+//Server Port on Machine
 const port = 3000;
 
 // Парсинг json
@@ -138,5 +139,5 @@ connection.getConnection((err, connect) => {
 
   // Информирование о запуске сервера и его порте
 app.listen(port, () => {
-    console.log("Сервер запущен на http://localhost:" + port);
+    console.log("Сервер запущен на http://localhost:" + port); 
   });
